@@ -1,0 +1,63 @@
+Step-by-Step Setup Instructions:
+1. Install Python:
+Download Python from the official site.
+During installation, ensure to check the option “Add Python to PATH”.
+Verify the installation by running:
+bash
+Copy code
+python --version
+2. Set Up a Virtual Environment:
+Create a virtual environment to manage dependencies:
+bash
+Copy code
+python -m venv chatbot_env
+Activate the virtual environment:
+Windows: chatbot_env\Scripts\activate
+macOS/Linux: source chatbot_env/bin/activate
+3. Install Required Python Libraries:
+With the virtual environment activated, run:
+bash
+Copy code
+pip install Flask psycopg2-binary bcrypt openai
+4. Install PostgreSQL:
+Download and install PostgreSQL.
+Create a database named “AI Chatbot” using:
+sql
+Copy code
+CREATE DATABASE "AI Chatbot";
+Set up a user and password if not already configured.
+5. Create Tables in PostgreSQL:
+Use SQL queries to create necessary tables like users, products, orders, and cart as required for the chatbot's functionality.
+6. Configure OpenAI API Key:
+Sign up for an OpenAI account if you don't have one.
+Get your API key from the OpenAI dashboard.
+Store the API key as an environment variable or use a configuration file:
+bash
+Copy code
+export OPENAI_API_KEY='your-api-key'
+7. Set Up the Flask Application:
+Save your Flask code in a file, e.g., app.py.
+Ensure you update the database connection parameters to match your PostgreSQL setup.
+To run the Flask app, execute:
+bash
+Copy code
+flask run
+8. Frontend (Optional for Interactive UI):
+If using a frontend framework like React, navigate to the frontend directory and install dependencies:
+bash
+Copy code
+npm install
+Start the frontend development server:
+bash
+Copy code
+npm start
+9. Run the Application:
+Ensure that the PostgreSQL server is running.
+With the virtual environment activated, run your Flask app:
+bash
+Copy code
+flask run
+Access the application in your browser at http://127.0.0.1:5000.
+10. Testing the Chatbot:
+Visit the chatbot interface and test different functionalities like user registration, login, product search, and interacting with the chatbot.
+Test scenarios to ensure that the chatbot handles queries accurately and can escalate issues to a live agent when needed.
